@@ -1,16 +1,125 @@
-## Hi there 👋
+# 🤖 NEO GENESIS — Site da Equipe de Robótica
 
-<!--
-**equipeneogenesis-crypto/equipeneogenesis-crypto** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Site oficial da equipe de robótica competitiva **NEO GENESIS** do IFTO Campus Palmas.
 
-Here are some ideas to get you started:
+## 🌐 Acesso ao Site
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![Acessar Site](https://img.shields.io/badge/Acessar%20Site-00D9FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://equipeneogenesis-crypto.github.io/EquipeNeoGenesis.github.io/)
+
+## 👥 Contribuidores
+
+| Contribuidor | Função | GitHub |
+|--------------|--------|--------|
+| **[Severo (Davi)](https://github.com/DSevero16)** | Desenvolvimento Web | [@DSevero16](https://github.com/DSevero16) |
+| **Equipe Neo Genesis** | Idealização, Design e Projetos | [@equipeneogenesis-crypto](https://github.com/equipeneogenesis-crypto) |
+
+## 🧱 Estrutura do Projeto
+
+```
+NEO/
+├── index.html             → Página inicial (landing page)
+├── pages/                 → Páginas internas do site
+│   ├── galeria.html       → Galeria de fotos
+│   ├── membros.html       → Membros da equipe
+│   ├── robo.html          → Robôs da equipe
+│   ├── desenvolvimento.html → Modelos 3D
+│   ├── oficina.html       → Laboratório G3
+│   ├── sobre.html         → Sobre a equipe
+│   ├── projetos.html      → Projetos
+│   ├── patrocinadores.html → Patrocinadores
+│   └── contato.html       → Contato
+│
+├── 1-dados/               → Dados editáveis (JS)
+│   ├── membros.js         → Lista dos membros
+│   ├── robos.js           → Lista dos robôs
+│   └── projetos.js        → Lista dos projetos
+│
+├── 2-estilos/             → Folhas de estilo (CSS)
+│   ├── style.css          → Estilo principal (landing page)
+│   ├── inner.css          → Estilo base das páginas internas
+│   ├── navbar.css         → Barra de navegação
+│   ├── hero.css           → Seção hero da landing page
+│   ├── responsivo.css     → Responsividade
+│   └── *.css              → Estilo específico de cada página
+│
+├── 3-scripts/             → Scripts JS
+│   ├── galeria.js         → Renderiza as fotos da galeria
+│   ├── render-membros.js  → Renderiza cards dos membros
+│   ├── render-robos.js    → Renderiza cards dos robôs
+│   ├── render-3d.js       → Visualizador 3D (Three.js)
+│   └── *.js               → Demais funcionalidades
+│
+├── 4-recursos/            → Recursos estáticos
+│   └── imagens/
+│       ├── site/          → Imagens do layout (logo, hero, headers)
+│       ├── robos/         → Fotos dos robôs
+│       ├── membros/       → Fotos dos membros
+│       ├── patrocinadores/ → Logos dos patrocinadores
+│       ├── slides/        → Imagens do carrossel
+│       └── galeria/       → Fotos da galeria
+│
+├── 5-fontes/              → Fontes locais
+└── README.md              → Este arquivo
+```
+
+## 📝 Como Editar
+
+### Adicionar fotos na Galeria
+
+1. Coloque as imagens em `4-recursos/imagens/galeria/`
+2. Edite `3-scripts/galeria.js` e adicione os nomes dos arquivos no array `fotos`
+
+```js
+const fotos = [
+  "minha-foto.jpg",
+  "outra-foto.jpg"
+];
+```
+
+### Adicionar um Membro
+
+Edite `1-dados/membros.js` e adicione um novo objeto:
+
+```js
+{
+  nome: "Fulano",
+  cargo: "Programador",
+  foto: "../4-recursos/imagens/membros/fulano.jpg",
+  status: "atual" // ou "anterior"
+}
+```
+
+### Adicionar um Robô
+
+Edite `1-dados/robos.js` e adicione um novo objeto:
+
+```js
+{
+  id: 13,
+  nome: "Meu Robô",
+  imagem: "../4-recursos/imagens/robos/meu-robo.jpg",
+  categoria: "Sumô 3kg",
+  status: "ativo"
+}
+```
+
+### Adicionar Patrocinadores
+
+Edite `index.html` e adicione na seção `#sponsors`:
+
+```html
+<div class="sponsor-card">
+  <img loading="lazy" src="4-recursos/imagens/patrocinadores/logo-empresa.png" alt="Empresa" class="sponsor-logo">
+</div>
+```
+
+## 🛠 Tecnologias
+
+- HTML5 + CSS3 + JavaScript puro
+- Three.js para modelos 3D
+- Font Awesome para ícones
+- Google Fonts para tipografia
+
+## 📫 Contato
+
+Quer entrar em contato com a equipe? Acesse a [página de contato](pages/contato.html) do site.
