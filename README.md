@@ -11,4 +11,3 @@ Site oficial da equipe de robótica competitiva **NEO GENESIS** do IFTO Campus P
 | Contribuidor | Função | GitHub |
 |--------------|--------|--------|
 | **[Severo (Davi)](https://github.com/DSevero16)** | Desenvolvimento Web | [@DSevero16](https://github.com/DSevero16) |
-.
